@@ -12,23 +12,15 @@ function makeHalfPrice(price) {
 
 function countBooks(bookArray) {
     return bookArray.length;
-
 }
 
 function isInStock(book){
-    let myResult = false;
-    if (book.quantity >= 1){
-        myResult = true;
-    }
-    return myResult;
-
+    return book.quantity >= 1 ? true : false;
 }
 
 function getTotalOrderPrice(price, quantity){
-    myNumber = price * quantity * 1.2;
-    return Math.round(myNumber*Math.pow(10,2))/Math.pow(10,2);
+    return Math.round((price * quantity * 1.2)*Math.pow(10,2))/Math.pow(10,2);
 }
-
 
 module.exports = {
     addVAT,
